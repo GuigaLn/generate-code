@@ -7,6 +7,7 @@
     "test": "jest --passWithNoTests --no-cache --runInBand",
     "test:watch": "npm t -- --watch",
     "test:coverage": "npm t -- --coverage",
+    "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
     "test:staged": "npm test -- --findRelatedTests",
     "prepare": "husky"
