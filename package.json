@@ -6,7 +6,10 @@
     "dev": "tsx watch src/index.ts",
     "test": "jest --passWithNoTests --no-cache --runInBand",
     "test:watch": "npm t -- --watch",
-    "test:coverage": "npm t -- --coverage"
+    "test:coverage": "npm t -- --coverage",
+    "lint:fix": "npm run lint -- --fix",
+    "test:staged": "npm test -- --findRelatedTests",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
