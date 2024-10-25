@@ -1,4 +1,4 @@
-import { formatTypeForInterface } from '../../src/generates/generate-interface/helpers'
+import { formatTypeForInterface } from '../../../src/generates/generate-interface/helpers'
 
 describe('Format Type For Interface', () => {
   it('Should return "string" when passed "string"', () => {
