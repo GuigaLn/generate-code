@@ -1,4 +1,4 @@
-import { IType } from 'interfaces';
+import { IType } from '../../../interfaces';
 
 export function formatTypeForInterface(type: IType) {
   switch(type) {

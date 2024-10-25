@@ -1,5 +1,5 @@
-import { IColumn } from '../interfaces';
-import { formatTypeForInterface } from '../utils';
+import { IColumn } from '../../interfaces';
+import { formatTypeForInterface } from './helpers';
 
 export function generateInterface(columns: IColumn[], interfaceName: string) {
   const interfaceProps = columns.map((column) => {
