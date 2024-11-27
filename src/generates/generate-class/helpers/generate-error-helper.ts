@@ -10,11 +10,13 @@ export function generateErrorHelper(
   }
 
   if (defaultValidationError.includes('throw')) {
-    return defaultValidationError.replace(
-      '{{text}}',
-      prop.replace('this.props.', ''),
-    );
+    const propName = prop.replace('this.props.', '');
+
+    let formattedError = defaultValidationError.replace(/"/g, '');
+    formattedError = formattedError.replace('{{prop}}', `"${propName}"`);
+    return formattedError;
   }
 
-  return `return "${defaultValidationError.replace('{{text}}', prop.replace('this.props.', ''))}"`;
+  const formattedError = defaultValidationError.replace(/"/g, '');
+  return `return "${formattedError.replace('{{prop}}', prop.replace('this.props.', ''))}"`;
 }
