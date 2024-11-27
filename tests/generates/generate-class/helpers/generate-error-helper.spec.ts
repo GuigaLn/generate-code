@@ -27,12 +27,12 @@ describe('Generate Error Helper', () => {
   });
 
   it('Should throw when passed any value includes "throw"', () => {
-    const result = generateErrorHelper('ANY_NAME', 'throw new BadRequest("{{text}}")');
+    const result = generateErrorHelper('ANY_NAME', 'throw new BadRequest("{{prop}}")');
     expect(result).toStrictEqual('throw new BadRequest("ANY_NAME")');
   });
 
   it('Should return text when passed any text', () => {
-    const result = generateErrorHelper('ANY_NAME', 'Bad request: {{text}}');
+    const result = generateErrorHelper('ANY_NAME', 'Bad request: {{prop}}');
     expect(result).toStrictEqual('return "Bad request: ANY_NAME"');
   });
 });
